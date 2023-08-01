@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block add_css %}
+<style>
+  .hidden-info {
+    display: none;
+  }
+  .card-body:hover .hidden-info {
+    display: block;
+  }
+  .price .duration {
+    margin-right: 100px;
+  }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.3/css/bootstrap-select.css" />
+{% endblock %}
+  
+{% block content %}
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-6">
+    
+    </div>
+    <div class="col-4">
+      <form method="post" action="#">
+        {% csrf_token %}
+      <select class="selectpicker" data-show-subtext="true" data-live-search="true" name="techno" onchange="this.form.submit()">
+        {% if selected %}
+        <option disabled selected hidden> {{selected}} </option>
+        {% else %}
+        <option selected> All </option>
+        {% endif %}
+        {% for tech_name in tech %}
+        <option value="{{tech_name.id }}">{{tech_name.name }}</option>
+        {% endfor %}
+      </select>
+    </form>
+    </div>
+  
+    <div class="col-2 text-right">
+      <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat" style="font-size:12px;">Add Course</a>
+    </div>
+  </div>
+
+</div>
+<br>
+<div class="container">
+  {% if course_details|length == 0 %}
+  <div class="alert alert-primary" role="alert">
+    No Course Added In This Time !!!
+  </div>
+  {% else %}
+  {% for course in course_details %}
+  <div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+      <div>
+        <p style="margin: 0;">Recommended-{{ forloop.counter }}</p>
+      </div>
+      <div>
+        <a href="#" class="btn btn-outline-success" style="font-size:12px;">edit</a>
+        <a href="#" class="btn btn-outline-info" style="font-size:12px;">View</a>
+      </div>
+    </div>
+    <div class="card-body" >
+      <h5 class="card-title">{{course.name}}</h5>
+      <p class="card-text">{{course.description}}</p>
+      <p class="card-text hidden-info">
+        <span><b>Price:</b> {{course.price}}</span>
+        <span style="margin-left: 120px;"><b>Duration:</b> {{course.duration}}</span>
+      </p>
+      
+    </div>
+  </div>
+  <br> 
+  {% endfor %} 
+  {% endif %}
+    
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="POST">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Course Titel:</label>
+            <input type="text" class="form-control" id="course" name="course_titel">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">DEscription:</label>
+            <textarea class="form-control" id="message-text" name="course_description"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Course Price:</label>
+            <input type="number" class="form-control" id="course" name="course_price">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Course Duration:</label>
+            <input type="text" class="form-control" id="course" name="course_duration">
+          </div>
+          <div class="mb-3">
+          <select class="selectpicker" data-show-subtext="true" data-live-search="true" name="base_tech">
+            <option selected>Select Base Technology</option>
+            {% for tech_name in tech %}
+            <option value="{{tech_name.id }}">{{tech_name.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Add Course</button>
+      </div>
+    </div>
+  </form>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block add_js %}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.3/js/bootstrap-select.js"></script>
+{% endblock %}
+  

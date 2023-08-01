@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login_form</title>
+    <link rel="stylesheet" href="{% static 'login.css'%}">
+  </head>
+  <body>
+    <div class="modal modal-login">
+      <div class="modal-login__header">
+        <h3>Login From</h3>
+        
+      </div>
+      <div class="modal-login__content">
+          <form method="POST" class="login-form">
+            {% csrf_token %}
+            <label for="name">Username</label>
+            <input type="text"  name="username" class="login-form__name" />
+            <label for="number">Password</label>
+            <input type="password" name="password" class="login-form__number">
+            <div class="control-group">
+              <label class="control control--checkbox">Remember me
+                <input type="checkbox" />
+                <div class="control__indicator">
+                </div>
+              </label>
+             
+            </div>
+            <button type="submit" class="login-form__number">Submit</button>
+            <a href="#" class="login-form__loginistered">Forget Password</a>
+          </form>
+          <div class="modal-separator">
+            <div class="modal-separator__text">
+              OR
+            </div>
+          </div>
+          <div class="social-block">
+            <label for="social">YOU CAN LOGIN</label>
+            <button class="social-block__facebook">
+              <img src="https://img.icons8.com/color/48/000000/facebook-circled.png"/>
+              Facebook
+            </button>
+            <button class="social-block__google">
+              <img src="https://img.icons8.com/color/48/000000/google-logo.png"/>
+              Google
+            </button>
+          </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

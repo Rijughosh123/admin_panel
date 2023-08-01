@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<ul class="box-info">
+    <li>
+        <i class='bx bxs-calendar-check' ></i>
+        <span class="text">
+            <h3>{{total_courses}}</h3>
+            <p style="font-size:12px;">Total Courses</p>
+        </span>
+    </li>
+    <li>
+        <i class='bx bxs-group' ></i>
+        <span class="text">
+            <h3>{{total_students}}</h3>
+            <p style="font-size:12px;">Total Students</p>
+        </span>
+    </li>
+    <li>
+        <i class='bx bxs-dollar-circle' ></i>
+        <span class="text">
+            <h3>$2543</h3>
+            <p style="font-size:12px;">Total parches</p>
+        </span>
+    </li>
+</ul>
+<div class="row">
+    <div class="col-6">
+        
+    </div>
+    <div class="col-6">
+        
+    </div>
+</div>
+{% block add_js %}
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+{% endblock %}
+{% endblock%}

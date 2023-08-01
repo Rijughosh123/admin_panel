@@ -1,0 +1,380 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+ }
+ html{
+scroll-behavior: smooth;
+}
+
+aside {
+width: 30%;
+padding-left: 15px;
+margin-left: 15px;
+float: right;
+font-style: italic;
+background-color: lightgray;
+}
+
+.bg-black{
+background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+
+}
+.text-white{
+ color:  white;
+}
+.text-black{
+ color:  black;
+}
+.bg-primary-orange{
+background-color: #fec503;
+}
+.primary-orange{
+color: #fec503;
+}
+.org-btn{
+border: 1px solid #fec503;
+color: #fec503;
+}
+.org-btn:hover{
+background-color: #fec503;
+color: white;
+}
+
+.light-grey{
+color:#6c757d;
+}
+
+.bg-light-grey{
+background-color: #6c757d:
+}
+
+.social-buttons-circle-dark-grey{
+background:  #1a1d20;
+}
+
+/* img css */
+
+/* .testimonals-container img{
+width:300px;
+
+} */
+
+/* hero */
+.center{
+text-align: center;
+}
+
+/*  Card hover */
+.move-up:hover{
+ background-color: #fec503;
+color: white;
+ transition: all .5s;
+ transform : translateY(-10px);
+}
+
+.ng-mrg-t{
+margin-top: -50px;
+}
+
+
+/* Footer code */
+.foot{
+/*   position: relative; */
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: #1a1d20;
+color: white;
+text-align: center;
+top: 75px;
+}
+
+a {
+color: #6c757d ;
+}
+a:hover {
+color: #fec503;
+text-decoration: none;
+}
+
+::selection {
+background: #fec503;
+text-shadow: none;
+}
+.footer-column {
+text-align: center;
+}
+.nav-link {
+ padding: 0.1rem 0;
+ }
+span.nav-link {
+ color: #6c757d;
+ }
+span.nav-link:hover {
+ color: #fec503;
+ }
+span.footer-title {
+ font-size: 14px;
+ font-weight: 700;
+ color: #fff;
+ text-transform: uppercase;
+ }
+ .fas {
+ margin-right: 0.5rem;
+ }
+
+footer {
+padding: 2rem 0;
+background-color: #212529;
+
+}
+
+
+ul.social-buttons {
+margin-bottom: 0;
+}
+
+ul.social-buttons li a:active,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:hover {
+background-color: #fec503;
+}
+
+ul.social-buttons li a {
+font-size: 20px;
+line-height: 40px;
+display: block;
+width: 40px;
+height: 40px;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+color: #fff;
+border-radius: 100%;
+outline: 0;
+background-color:  #1a1d20;
+}
+
+footer .quick-links {
+font-size: 90%;
+line-height: 40px;
+margin-bottom: 0;
+text-transform: none;
+font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+.copyright {
+color: white;
+}
+
+.fa-ellipsis-h {
+color: white;
+padding: 2rem 0;
+}
+.underline-link:hover {
+ text-decoration: underline;
+}
+
+/* google logo + search box starts */
+#google-logo {
+ position: relative;
+ max-height: 100%;
+ max-width: 100%;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 92px;
+ margin-bottom: 40px;
+ margin-top: 25px;
+}
+
+#search-area {
+ position: relative;
+ width:584px;
+ height:30px;
+ background: #fff;
+ display: flex;
+ border: 1px solid #dfe1e5;
+ box-shadow: none;
+ border-radius: 24px;
+ z-index: 3;
+ height: 44px;
+ margin: 0 auto;
+ white-space: pre;
+}
+
+#search-area:hover {
+ background-color: #fff;
+ box-shadow: 0 1px 6px rgba(32,33,36,.28);
+ border-color: rgba(223,225,229,0);
+}
+
+#search-icon {
+ padding: 15px;
+ color: rgb(216, 212, 212);
+ background-color: transparent;
+}
+
+#search {
+ display: flex;
+ flex: 100%;
+ border: 0px;
+ background-color: transparent;
+ outline: none;
+ font-size: 16px;
+ font-weight: 100;
+ height: 34px;
+ margin: auto;
+ padding: 0;
+}
+/* google logo + search box ends */
+
+/* navigation bar starts */
+nav ul {
+ list-style-type: none;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-end;
+ align-items: center;
+ padding: 0 6px;
+ margin: 0px 4px;
+ font-size: 14px;
+}
+
+nav ul li {
+ padding: 6px 5px;
+}
+
+a {
+ text-decoration: none;
+ color: #000000;
+ text-align: center;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: small;
+}
+
+#icon {
+ width: auto;
+ height: auto;
+ display: inline-block;
+ justify-content: flex-start;
+ box-sizing: border-box;
+}
+
+#icon:hover {
+ background-color: rgba(60,64,67,0.08);
+ box-shadow: 0 1px 6px rgba(60,64,67,0.08);
+ border-radius: 50%;
+ cursor: pointer;
+}
+
+button {
+ width: 32px;
+ height: 32px;
+ background-color: transparent;
+ background-image: url(//ssl.gstatic.com/gb/images/i1_1967ca6a.png);
+ background-position: -131px -37px;
+ opacity: 0.6;
+ border: none;
+}
+
+#sign-in-button {
+ display: flex;
+ flex: 100%;
+ font-weight: 500;
+ background-color: #1a73e8;
+ border: 1px solid transparent;
+ box-shadow: 1px solid rgb(219, 213, 213);
+ color: #FFFFFF;
+ margin-left: 8px;
+ margin-right: 8px;
+ min-width: 60px;
+ padding: 9px 23px;
+ border-radius: 4px;
+ justify-content: center;
+ align-items: center;
+}
+/* navigation bar ends */
+
+/* footer starts */
+footer {
+ background-color: #eeeeee;
+ padding: 2px 15px;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: small;
+ color: #3b3b3b;
+}
+
+#footer-nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;;
+}
+
+#location {
+ border-bottom: 1px solid rgba(177, 178, 180, 0.5);
+}
+
+#left-side-footer ul, #right-side-footer ul{
+ list-style-type: none;
+}
+
+#left-side-footer ul li a, #right-side-footer ul li a {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: small;
+ color: #3b3b3b;
+ left: 0;
+}
+
+#left-side-footer, #right-side-footer {
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ align-items: center;
+ width: auto;
+}
+/* footer starts */
+
+/* google search + feeling lucky buttons starts */
+#buttons {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ font-size: 14px;
+ font-family: arial,sans-serif;
+ color: #222;
+}
+
+.buttons {
+ background-color: #f8f9fa;
+ border: 1px solid #f8f9fa;
+ border-radius: 4px;
+ color: #3c4043;
+ font-family: arial,sans-serif;
+ font-size: 14px;
+ margin: 11px 4px;
+ padding: 2px 16px;
+ line-height: 27px;
+ height: 36px;
+ min-width: 54px;
+ width: autox;
+ text-align: center;
+ cursor: pointer;
+ text-align:center
+}
+
+.buttons p {
+ margin-top: 5px;
+}
+
+.buttons:hover {
+ border: 1px solid #c8c9ca;
+ box-shadow: 0 1px 1px #c8c9ca;
+}
