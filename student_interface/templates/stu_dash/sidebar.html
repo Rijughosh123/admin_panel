@@ -8,27 +8,27 @@
     <div class="menu-sidebar__content js-scrollbar1">
         <nav class="navbar-sidebar">
             <ul class="list-unstyled navbar__list">
-                <li class="active">
-                    <a href="#">
+                <li class="{% if act == 'home' %}active{% endif %}">
+                    <a href="/student/stu_home/">
                     <i class="fas fa-chart-bar"></i>Home</a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="{% if act == 'course' %}active{% endif %}">
+                    <a href="/student/stu_course/">
                     <i class="fas fa-chart-bar"></i>Courses</a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="{% if act == 'p_courses' %}active{% endif %}">
+                    <a href="/student/stu_p_course/">
                     <i class="fas fa-table"></i>Purches</a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="{% if act == 'trophy' %}active{% endif %}">
+                    <a href="/student/student_trophy/">
                     <i class="far fa-check-square"></i>Trophy</a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="{% if act == 'calendar' %}active{% endif %}">
+                    <a href="#" >
                     <i class="fas fa-calendar-alt"></i>Calendar</a>
                 </li>
-                <li>
+                <li class="{% if act == 'group' %}active{% endif %}">
                     <a href="#">
                     <i class="fas fa-map-marker-alt"></i>Groups</a>
                 </li>
